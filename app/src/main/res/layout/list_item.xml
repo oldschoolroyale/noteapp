@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
         <variable
@@ -8,27 +9,41 @@
 
     </data>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@{model.title}"
-            android:textColor="@color/black"
-            android:textSize="20sp"
-            android:padding="8dp"
-            android:textStyle="bold" />
+            app:cardElevation="45dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="5dp"
+            app:cardCornerRadius="35dp"
+            app:cardBackgroundColor="@android:color/white"
+            android:padding="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@{model.description}"
-            android:textSize="16sp"
-            android:padding="8dp"
-            android:textColor="@color/black" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{model.title}"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:textStyle="bold" />
 
-    </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{model.description}"
+                    android:textSize="16sp"
+                    android:padding="8dp"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
 </layout>
